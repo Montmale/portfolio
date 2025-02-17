@@ -194,24 +194,37 @@ canvas {
 }
 
 
-
 #mobile-message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 3%;
-  background-color: #ff0101;
-  color: #ffffff;
-  font-size: 2em;
-  text-align: center;
-  z-index: 9999;
+  display: none; /* Nasconde il messaggio di default */
 }
 
-.hidden {
-  display: none;
+@media (max-width: 768px) { /* Applica solo a dispositivi con schermo più piccolo (mobile) */
+  #mobile-message {
+    display: flex; /* Mostra il messaggio su mobile */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    color: #444;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    animation: fadeIn 1s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
