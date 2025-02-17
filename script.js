@@ -172,3 +172,13 @@ function scrollDown() {
     behavior: "smooth", // Aggiungi un effetto di scroll fluido
   });
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Controlla se è un dispositivo mobile
+  if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    // Mostra il messaggio e nasconde tutto il resto
+    document.getElementById('mobile-message').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Blocca lo scroll in background
+  }
+});
