@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "HelveticaNowDisplay";
+  src: url("assets/font/HelveticaNowDisplay-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PPEditorialNew";
+  src: url("assets/font/PPEditorialNew-Ultralight.woff2") format("woff2");
+  font-weight: lighter; /* Ultralight di solito è 200 */
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  cursor: crosshair !important;
+}
+
+html,
+body {
+  font-family: "HelveticaNowDisplay", sans-serif;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Fa sì che la pagina sia almeno alta come la finestra */
+  display: flex;
+  flex-direction: column; /* Organizza gli elementi in una colonna */
+  width: 100%;
+  text-align: justify;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  font-size: 1.8vw;
+  padding: 1% 3%;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  mix-blend-mode: difference;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0% 3%;
+  padding-bottom: 2%;
+  height: 6vh;
+}
+
+.underline:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.list {
+  margin: 2% 0%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 200;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 7vw;
+  font-family: "PPEditorialNew", serif;
+  text-align: center;
+  border-top: solid 0.3vh;
+  line-height: 11vw;
+}
+
+h2 {
+  font-size: 5vw;
+  font-family: "PPEditorialNew", serif;
+}
+
+h3 {
+  font-size: 1.8vw;
+}
+
+h4 {
+  font-size: 1.3vw;
+}
+
+/* -------------- SECTION --------------------- */
+
+section {
+  display: block;
+  flex-grow: 1; /* Fa sì che il contenuto occupi lo spazio disponibile */
+  padding: 2% 3%;
+}
+
+/* -------------- 2 COLONNE, 50% (WORKS) --------------------- */
+
+.flex-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Distribuisce gli elementi verticalmente */
+  margin-top: 25vh;
+}
+
+.flex-item {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: column; /* Allinea gli elementi verticalmente */
+  justify-content: space-between;
+}
+
+/* -------------- 4 COLONNE, 25% (ALL WORKS) --------------------- */
+
+.flex-container1 {
+  position: relative;
+  display: flex;
+  padding: 0.4% 0%;
+  border-bottom: solid 2px transparent; /* Impostiamo un bordo trasparente di base */
+}
+
+.flex-container1:hover {
+  border-bottom: solid 2px black; /* Solo quando il mouse è sopra il contenitore */
+}
+
+.flex-item1 {
+  flex: 1 1 25%;
+}
+
+/* -------------- APERTURA TESTO + IMMAGINE --------------------- */
+
+.indice {
+  display: flex;
+  align-items: center; /* Centra verticalmente l'immagine e il testo */
+  justify-content: center; /* Centra orizzontalmente l'immagine e il testo */
+}
+
+.indice div {
+  overflow: hidden;
+  display: inline-block;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.indice:hover div {
+  width: 1.5em; /* Imposta l'altezza dell'immagine uguale all'altezza del testo */
+}
+
+.indice img {
+  display: block; /* Rimuove lo spazio sotto l'immagine */
+  max-height: 100%; /* Impedisce che l'immagine ecceda l'altezza del testo */
+  object-fit: contain; /* Mantiene le proporzioni dell'immagine */
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.indice span:first-child {
+  margin-right: 1vw;
+  transition: margin-right 0.3s ease;
+}
+
+.indice:hover span:first-child {
+  margin-right: 4vw; /* Regola la distanza per fare spazio all'immagine */
+}
+
+.indice span:last-child {
+  margin-left: 1vw;
+  transition: margin-left 0.3s ease;
+}
+
+.indice:hover span:last-child {
+  margin-left: 4vw; /* Regola la distanza per fare spazio all'immagine */
+}

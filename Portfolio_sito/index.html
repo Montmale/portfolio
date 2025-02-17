@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio di Alessandra Palombelli, Communication Designer."
+    />
+
+    <title>Alessandra Palombelli</title>
+    <link rel="icon" type="image/x-icon" href="./assets/ap.png" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="libraries/p5.min.js" defer></script>
+    <script src="libraries/p5.sound.min.js" defer></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <!-------------------- MENU --------------------->
+    <header>
+      <div style="width: 50vw">
+        <a href="index.html" target="_self">
+          <span class="shuffle underline"
+            >Portfolio | Communication Design</span
+          >
+        </a>
+      </div>
+
+      <div style="display: flex; width: 50vw; justify-content: space-between">
+        <div>
+          <a href="works.html" target="_self">
+            <span class="shuffle underline">Works,</span>
+          </a>
+          <a href="about.html" target="_self">
+            <span class="shuffle underline">About me</span>
+          </a>
+        </div>
+
+        <a href="contact.html" target="_self">
+          <span class="shuffle underline">Contact</span>
+        </a>
+      </div>
+    </header>
+
+    <!-------------------- MAIN --------------------->
+    <section style="height: 100vh; overflow: hidden; position: relative">
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        loading="lazy"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        "
+      >
+        <source src="/assets/immagini/00_home.mp4" type="video/mp4" />
+      </video>
+      <div
+        class="flex-container"
+        style="
+          margin-top: 83vh;
+          color: white;
+          mix-blend-mode: difference;
+          align-items: flex-end;
+        "
+      >
+        <h2>Alessandra Palombelli</h2>
+        <h3 class="shuffle" onclick="scrollDown()">scroll↓</h3>
+      </div>
+    </section>
+
+    <section style="margin-top: 8vh; height: 110vh">
+      <h3 style="padding: 1% 0%">Projects</h3>
+      <div class="list">
+        <h1 class="indice">
+          <a href="12_prj.html" target="_self">
+            <span class="shuffle" style="margin-right: 0; padding-right: 0.1em"
+              >Beyond</span
+            ><!-- 
+            -->
+            <div>
+              <canvas class="canvas"></canvas
+              ><img
+                class="pixel-image"
+                src="assets/immagini/Squirrel/00_squirrel.jpg"
+                alt="Hover Image"
+                style="display: none"
+              />
+            </div>
+            <!-- 
+            --><span class="shuffle" style="margin-left: 0; padding-left: 0.1em"
+              >the squirrel</span
+            >
+          </a>
+        </h1>
+
+        <h1 class="indice">
+          <a href="11_prj.html" target="_self">
+            <span class="shuffle" style="margin-right: 0; padding-right: 0.1em"
+              >Raw</span
+            ><!-- 
+            -->
+            <div>
+              <canvas class="canvas"></canvas
+              ><img
+                class="pixel-image"
+                src="assets/immagini/Raw/00.jpg"
+                alt="Hover Image"
+                style="display: none"
+              />
+            </div>
+            <!-- 
+            --><span class="shuffle" style="margin-left: 0; padding-left: 0.1em"
+              >Nature</span
+            >
+          </a>
+        </h1>
+
+        <h1 class="indice">
+          <a href="10_prj.html" target="_self">
+            <span class="shuffle" style="margin-right: 0; padding-right: 0.1em"
+              >El Hombre</span
+            ><!-- 
+            -->
+            <div>
+              <canvas class="canvas"></canvas
+              ><img
+                class="pixel-image"
+                src="assets/immagini/Hombre/00.png"
+                alt="Hover Image"
+                style="display: none"
+              />
+            </div>
+            <!-- 
+            --><span class="shuffle" style="margin-left: 0; padding-left: 0.1em"
+              >Liberado</span
+            >
+          </a>
+        </h1>
+
+        <h1 class="indice">
+          <a href="09_prj.html" target="_self">
+            <span class="shuffle" style="margin-right: 0; padding-right: 0.1em"
+              >Rum</span
+            ><!-- 
+            -->
+            <div>
+              <canvas class="canvas"></canvas
+              ><img
+                class="pixel-image"
+                src="assets/immagini/Rum/00.png"
+                alt="Hover Image"
+                style="display: none"
+              />
+            </div>
+            <!-- 
+            --><span class="shuffle" style="margin-left: 0; padding-left: 0.1em"
+              >'n' Gun</span
+            >
+          </a>
+        </h1>
+
+        <h1 class="indice">
+          <a href="08_prj.html" target="_self">
+            <span class="shuffle" style="margin-right: 0; padding-right: 0.1em"
+              >La Profana</span
+            ><!-- 
+            -->
+            <div>
+              <canvas class="canvas"></canvas
+              ><img
+                class="pixel-image"
+                src="assets/immagini/Profana/00.jpg"
+                alt="Hover Image"
+                style="display: none"
+              />
+            </div>
+            <!-- 
+            --><span class="shuffle" style="margin-left: 0; padding-left: 0.1em"
+              >Commedia</span
+            >
+          </a>
+        </h1>
+
+        <!-- non so perché ma qui giù devo invertire l'ordine di "a" e "h1"-->
+        <a href="works.html" target="_self">
+          <h1 class="shuffle" style="border-bottom: solid 0.3vh">
+            * All Works *
+          </h1>
+        </a>
+      </div>
+    </section>
+  </body>
+
+  <script src="script.js" defer></script>
+</html>
